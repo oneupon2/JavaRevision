@@ -1,0 +1,52 @@
+import java.lang.*;
+import java.util.*;
+
+class Base
+{
+	int x = 3;
+	int y = 5;
+	Base()
+	{
+		System.out.println("In Base Default Constructor>>");
+	}
+	
+	void Fun(){
+		System.out.println("In Base Fun>>");
+	}
+}
+
+class Derived extends Base
+{
+	int z = 10;
+	
+	Derived()
+	{	
+		System.out.println("In Derived Default Constructor>>");		
+	}
+	
+	void Fun()
+	{
+			System.out.println("In Derived Fun>>");
+			System.out.println("Value of Base x: " +super.x); //Upar wale class ke value print karne ke liye super use kiya
+			System.out.println("Value of Derived z: " +this.z); //Same class ke value print karne ke liye
+	}
+}
+
+class Inheritance
+{
+	public static void main(String args[])
+	{
+		System.out.println("Inside Main Class>>");
+		
+/* 		Base bobj = new Base();
+		bobj.Fun();
+		
+		Derived dobj = new Derived();
+		dobj.Fun(); */
+		
+		Base bref = new Derived(); //upcasting() if derived extends base we can also call derived through base class
+		bref.Fun();
+			
+
+	}
+}

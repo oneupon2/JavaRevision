@@ -1,0 +1,34 @@
+import java.lang.*;
+
+class Div
+{
+	public int Number1;
+	public int Number2;
+	
+	
+	Div(){
+		this.Number1 = 0;
+		this.Number2 = 0;
+	}
+	
+	Div(int x, int y){
+		
+		Number1 =  x;
+		Number2 =  y;
+	}
+	
+	public int Divison(){
+		return Number1 / Number2;
+	}
+}
+	public class Demo{
+		
+		public static void main(String args[]){
+			System.out.println("In main>>");
+			
+			Div obj1;
+			obj1 =  new Div(100,10);
+			int ret = obj1.Divison();
+			System.out.println(ret);
+		}
+	}

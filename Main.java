@@ -1,0 +1,41 @@
+class Base
+{	
+	String name;
+	int rollNo;
+	static String college = "MITWPU";
+	
+	Base()
+	{
+		System.out.println("Base Constructor");
+		
+	}
+	
+	Base(int x, String y)
+	{
+		this.rollNo = x;
+		this.name = y;
+	}
+	
+	void Display()
+	{
+		System.out.println("Name: "+name+" Roll No: "+rollNo+" College Name: "+college);
+	}
+}
+
+
+class Main
+{
+	public static void main(String args[])
+	{
+		System.out.println("Hello!1");
+	
+		Base bobj1 =  new Base(1,"Ram");
+		Base bobj2 =  new Base(2,"Shyam");
+		
+		bobj1.Display();
+		bobj2.Display();
+	
+		
+		
+	}
+}
