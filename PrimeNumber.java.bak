@@ -1,0 +1,54 @@
+//prime number
+import java.lang.*;
+import java.util.*;
+import java.io.*;
+
+class getPrimeNumber
+{	
+	int No1;
+	
+	getPrimeNumber()
+	{
+		System.out.println("Inside Default Constructor>>");	
+		No1 = 0;
+	}
+	
+	public void primeNumber(int No1)
+	{
+		int count = 0;
+		for(int i = 2 ; i<=No1; i++)
+		{
+			if(No1 % i == 0)
+			{
+				count++;
+			}
+		}	
+		if(count==1)
+		{
+			System.out.println("Issa Prime Number");
+		}
+		else
+		{
+			System.out.println("Not a Prime Number");
+		}
+}
+
+
+class PrimeNumber
+{
+	public static void main(String args[])
+	{
+		Scanner sobj = new Scanner(System.in);
+		
+		System.out.println("Enter the Number:");
+		int No1 = sobj.nextInt();
+		sobj.close();
+		
+		getPrimeNumber pobj = new getPrimeNumber();
+		pobj.primeNumber(No1);
+		
+	}
+}
+
+
+}

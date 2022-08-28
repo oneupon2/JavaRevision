@@ -1,0 +1,52 @@
+//palindrome
+import java.lang.*;
+import java.util.*;
+import java.io.*;
+
+class getPalindrome
+{
+	int No1;
+	getPalindrome()
+	{
+		System.out.println("Inside Default Constructor");
+		No1 = 0;
+	}
+	
+	public void palindrome(int iNo1)
+	{
+		int rem = 0;
+		int reverse = 0;
+		int temp = iNo1;
+		
+		while(temp != 0)
+		{
+			rem = temp%10;
+			reverse = (reverse*10) + rem;
+			temp /= 10;
+		};
+		if(reverse == iNo1)
+		{
+			System.out.println("It is a Palindrome Number");
+		}
+		else
+		{
+			System.out.println("It is not a Palindrome Number");
+		}
+	}
+}
+
+
+class Palindrome
+{
+	public static void main(String args[])
+	{
+		Scanner sobj = new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int No1 = sobj.nextInt();
+		sobj.close();
+		
+		getPalindrome pobj = new getPalindrome();
+		pobj.palindrome(No1);
+		
+	}
+}

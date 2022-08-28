@@ -11,7 +11,12 @@ class BufferReader
 		System.out.println("Enter Your Name: ");
 		String name = bobj.readLine();
 		
+		System.out.println("Enter Your Phone Number: ");
+		int number = Integer.parseInt(bobj.readLine());
+		
 		System.out.println("Hello, "+name);
+		System.out.println("Your Phone Number is: "+number);
+		
 		
 	
 	}
